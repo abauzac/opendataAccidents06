@@ -1,12 +1,12 @@
 
-am <- read.csv("acc_fr_0610.csv", )
+am <- read.csv("../csv/acc_fr_0610.csv", )
 
 am <- data.frame(lapply(am, as.character), stringsAsFactors=FALSE)
 
 # filtrer sur le département 
 am <- am[am$dep == '060',]
 
-vf <- read.csv("villes_france.csv")
+vf <- read.csv("../csv/villes_france.csv")
 vf <- vf[vf$X01 == '06',]
 
 # cast data frame factors type to characters
@@ -77,7 +77,7 @@ for(i in 1:nrow(am)){
 }
 
 #backup
-write.csv(am, file="accident_departement.csv")
+write.csv(am, file="../csv/accident_departement.csv")
 
 library(ggmap)
 
@@ -114,7 +114,7 @@ for(i in 1:nrow(am)){
 
 
 #backup
-write.csv(am, file="accident_departement_tempgeocode_final.csv")
+write.csv(am, file="../csv/accident_departement_full.csv")
 
 
 
