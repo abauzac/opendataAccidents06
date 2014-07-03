@@ -85,7 +85,7 @@ library(ggmap)
 am$lat <- ""
 am$long <- ""
 
-############ REPEAT THIS PART IF EXCEEDING LIMITS
+############ REPEAT THIS PART IF EXCEEDING LIMITS in google maps API
 
 i <- 1
 adress <- ""
