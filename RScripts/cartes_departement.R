@@ -66,5 +66,19 @@ png(file="../images/map_accidents_am_density_filtre_grossevilles.png",width=1024
 plot(pdensityplot)
 dev.off()
 
+#barplot des 1ere villes
 
+png(file="../images/barplot_accidents_top10_villes.png",width=1024,height=512)
+par(mar=c(10,4,4,2))
+t <- table(am$com)
+t <- sort(t, decreasing=TRUE)
+x <- barplot(head(t, 10), xlab=NULL, space=1, main="", ylab="", xaxt="n")
+text(labels= names(head(t, 10)), srt=25, cex=0.8, x=x, y=-1000, xpd=TRUE, adj=1)
+dev.off()
+
+
+png(file="../images/grid_accidents_top20_villes.png")
+topCity20 <- head(t, 20)
+grid.table(data.frame(topCity20), cols=NULL)
+dev.off()
 
