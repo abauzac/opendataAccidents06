@@ -14,6 +14,17 @@ Cartes Shapefile par OpenStreetMap. Merci à eux !
 Pour les autres départements, c'est par ici :
 http://export.openstreetmap.fr/contours-administratifs/communes/
 
+Données utilisées :
+
+villes_france.csv
+Merci à SQL.sh 
+http://sql.sh/736-base-donnees-villes-francaises
+Licence CC BY-SA 4.0
+
+acc_fr_0610.csv
+vehicules_implique.csv
+http://www.data.gouv.fr/fr/dataset/base-de-donnees-accidents-corporels-de-la-circulation-sur-6-annees
+Opence licence 
 
 
 TODO : 
