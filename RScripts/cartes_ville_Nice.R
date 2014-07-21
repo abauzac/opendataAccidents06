@@ -71,3 +71,12 @@ scale_fill_gradient(low='#FF0000', high="#0000FF") +
 png(file="../images/map_accidents_nice_density_nofiltre.png",width=1024,height=1024)
 plot(pdensityplot)
 dev.off()
+
+library(gridExtra)
+
+top <- table(acc_nice$fulladress)
+top <- sort(top, decreasing=TRUE)
+png(file="../images/grid_accidents_top20_nice_rues.png")
+topRue <- head(top, 20)
+grid.table(data.frame(topRue), cols=NULL)
+dev.off()
